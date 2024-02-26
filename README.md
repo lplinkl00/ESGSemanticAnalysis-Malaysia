@@ -57,6 +57,3 @@ After the data is preprocessed there are 4 different models to create. One for e
 
 Word2Vec was chosen to see which words were most strongly related. Assuming that each document is written differently, the models should be totally different in their most common words and relations. 
 
-### Visualization
-
-There are a number of visualizations to be done to analyze the text data. Starting with analyzing the model. Using PCA to more clearly see the common words and relations.
