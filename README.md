@@ -57,3 +57,19 @@ After the data is preprocessed there are 4 different models to create. One for e
 
 Word2Vec was chosen to see which words were most strongly related. Assuming that each document is written differently, the models should be totally different in their most common words and relations. 
 
+## Visualization
+
+To visualize the models together in one graph, without combining the models together, so that the models can be seen in relation to one another.
+
+In order to plot the models onto a graph a dimensionality reduction algorithm needs to be used to, in an overly simplified explaination, convert the words stored in the models to x,y coordinates. 
+
+In this project UMAP, t-SNE and PCA were tested to see how the models would look. PCA is used for the final graph due to its consistent output over multiple runs.
+
+To achieve this 50 common words were extracted from the three models to set a benchmark without using too much time for each run. The list of words are then used to extract the corresponding vectors from each model. After PCA is applied to the vectors, the reduced vectors gathered are split into seperate lists following the order of the models being combined. Such that if model 1 + model 2 + model 3 is the order of the combination of models to get the common words, the vectors are split by model 1, 2 and 3 in that order. This is important to ensure that the labels when plotting the vectors are correct.
+
+Finally a scatter plot is used to display the vectors.
+
+
+
+
+
